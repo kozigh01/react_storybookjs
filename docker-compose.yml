@@ -1,0 +1,12 @@
+version: '3'
+services:
+  react-storybook-intro:
+    build:
+      context: ./01-intro-to-storybook/.devcontainer
+      dockerfile: Dockerfile
+      args:
+        VARIANT: "14"
+    volumes: 
+      - ./01-intro-to-storybook:/workspace
+      - /workspace/node_modules
+    command: sleep infinity
